@@ -10,6 +10,5 @@ export class AppComponent {
     { title: 'About', url: '/about', icon: 'alert' },
     { title: 'Contact', url: '/contact', icon: 'call' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }

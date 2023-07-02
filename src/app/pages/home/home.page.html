@@ -15,24 +15,24 @@
   </ion-header>
   <ion-list>
     <ion-item>
-      <ion-input label="Name:" placeholder="Name"></ion-input>
+      <ion-input label="Name:" placeholder="Name" [(ngModel)]="name" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="Head:" placeholder="Head"></ion-input>
+      <ion-input label="Head:" placeholder="Head" [(ngModel)]="head" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-textarea label="Text Content" labelPlacement="stacked" placeholder="Enter text"></ion-textarea>
+      <ion-textarea label="Text Content" labelPlacement="stacked" placeholder="Enter text" [(ngModel)]="content" required></ion-textarea>
     </ion-item>
     <ion-item>
       <ion-label>Date:</ion-label>
-      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+      <ion-datetime-button datetime="datetime" ></ion-datetime-button>
 
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
-          <ion-datetime id="datetime"></ion-datetime>
+          <ion-datetime id="datetime" [(ngModel)]="dt" required></ion-datetime>
         </ng-template>
       </ion-modal>
     </ion-item>
   </ion-list>
-  <ion-button type="submit" >submit</ion-button>
+  <ion-button type="submit" (click)="gotonext()" expand="block">submit</ion-button>
 </ion-content>

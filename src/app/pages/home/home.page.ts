@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
-  constructor() { }
+  name: any;
+  head: any;
+  content: any;
+  dt: any;
+  constructor(public navCtrl: NavController,
+    public router: Router) { }
 
   ngOnInit() {
+  }
+
+  gotonext(){
+    this.router.navigate(['homeresult', 
+       this.name , this.head , this.content , this.dt]);
   }
 
 }

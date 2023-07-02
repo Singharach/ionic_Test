@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>homeresult</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">homeresult</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    Name: {{this.x}}
+  </ion-item>
+  <ion-item>
+    Head: {{this.y}}
+  </ion-item>
+  <ion-item>
+    <ion-textarea [readonly]="true" label="Content:" placeholder="{{this.z}}"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    DateTime: {{this.a}}
+  </ion-item>
+</ion-content>
