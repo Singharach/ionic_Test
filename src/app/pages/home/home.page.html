@@ -21,18 +21,17 @@
       <ion-input label="Head:" placeholder="Head" [(ngModel)]="head" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-textarea label="Text Content" labelPlacement="stacked" placeholder="Enter text" [(ngModel)]="content" required></ion-textarea>
+      <ion-textarea label="Text Content" labelPlacement="stacked" placeholder="Enter text" [(ngModel)]="content"
+        required></ion-textarea>
     </ion-item>
-    <ion-item>
-      <ion-label>Date:</ion-label>
-      <ion-datetime-button datetime="datetime" ></ion-datetime-button>
-
-      <ion-modal [keepContentsMounted]="true">
-        <ng-template>
-          <ion-datetime id="datetime" [(ngModel)]="dt" required></ion-datetime>
-        </ng-template>
-      </ion-modal>
-    </ion-item>
+    <ion-item-group>
+      <ion-item>
+        <ion-label>Date:</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-datetime presentation="date-time" [preferWheel]="true" [(ngModel)]="dt" required></ion-datetime>
+      </ion-item>
+    </ion-item-group>
   </ion-list>
   <ion-button type="submit" (click)="gotonext()" expand="block">submit</ion-button>
 </ion-content>

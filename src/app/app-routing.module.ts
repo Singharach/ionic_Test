@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'pages/home',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
   {
-    path: 'homeresult/:name/:head/:content/:dt',
+    path: 'homeresult/:dataobj',
     loadChildren: () => import('./pages/homeresult/homeresult.module').then( m => m.HomeresultPageModule)
   }
 

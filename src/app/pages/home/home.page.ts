@@ -20,8 +20,16 @@ export class HomePage implements OnInit {
   }
 
   gotonext(){
-    this.router.navigate(['homeresult', 
-       this.name , this.head , this.content , this.dt]);
+    // this.router.navigate(['homeresult', 
+    //    this.name , this.head , this.content , this.dt]);
+    let dataobj={
+      getname:this.name,
+      gethead:this.head,
+      getcontent:this.content,
+      getdt:this.dt
+    };
+    let datastr = JSON.stringify(dataobj);
+    this.router.navigate(['homeresult',datastr])
   }
 
 }
