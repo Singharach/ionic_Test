@@ -1,16 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
     <ion-title>About</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+<ion-list>
+  <ion-item-sliding *ngFor = "let item of productlist">
+    <ion-item>
+      <ion-img src="{{item.icon}}"></ion-img>
+      <ion-label>{{item.productname}}</ion-label>
+    </ion-item>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">about</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+    <ion-item-options>
+      <ion-item-opiton (click)="showedit(item)">Edit</ion-item-opiton>
+      <ion-item-option>Favorite</ion-item-option>
+      <ion-item-option color="danger">Delete</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+
+</ion-list>
+
+
 </ion-content>
