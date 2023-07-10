@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'homeresult/:dataobj',
     loadChildren: () => import('./pages/homeresult/homeresult.module').then( m => m.HomeresultPageModule)
+  },  {
+    path: 'customer',
+    loadChildren: () => import('./pages/customer/customer.module').then( m => m.CustomerPageModule)
   }
+
 
 ];
 

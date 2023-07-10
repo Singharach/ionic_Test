@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular/providers/alert-controller';
+import { AlertController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-about',
@@ -38,7 +39,7 @@ export class AboutPage implements OnInit {
   async showedit(item: any) {
     let alert = this.alertCtrl.create({
       header: 'Edit',
-      subHeader: "Fill the form",
+      subHeader: 'Fill the form',
       inputs: [
         {
           name: 'inpname',
@@ -46,9 +47,9 @@ export class AboutPage implements OnInit {
           value: item.productname
         },
         {
-          name: 'password',
-          placeholder: 'Password',
-          type: 'password'
+          name: 'inprice',
+          placeholder: 'price',
+          value: item.price
         }
       ],
       buttons: [
@@ -60,13 +61,26 @@ export class AboutPage implements OnInit {
           }
         },
         {
-          text: 'Login',
+          text: 'Update',
           handler: data => {
+            //code here when user click update
+            console.log("update", this.productlist.length);
+            console.log(item);
+            for (let i = 0; i < this.productlist.length; i++) {
+              console.log(this.productlist[i]);
+              if (this.productlist[i] == item) {//found
+                console.log("data.inpname", data.inpname, data.inprice);
 
-          }
+                this.productlist[i].productname = data.inpname;
+                this.productlist[i].price = data.inprice;
+              }
+            }
+
+          }//hadler
         }
       ]
     });
     (await alert).present();
   }
+
 }
