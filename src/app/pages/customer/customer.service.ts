@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { collection, collectionData, Firestore } from
+import { addDoc, collection, collectionData, deleteDoc, Firestore } from
     '@angular/fire/firestore';
 import { Observable, map } from 'rxjs';
 
@@ -25,4 +25,25 @@ export class CrudService {
         const notesRef = collection(this.firestore, 'StudentCollection');
         return collectionData(notesRef, { idField: 'id' }) as Observable<CustomerData[]>;
     }
+
+    createData(tmpObj: CustomerData) {
+        const notesRef = collection(this.firestore, 'StudentCollection');
+
+        return addDoc(notesRef,{
+            fullname: tmpObj.fullname,
+            price: tmpObj.price,
+            telno: tmpObj.telno,
+            ispostpaid: tmpObj.ispostpaid,
+            
+        });
+
+    
+    }
+    
+    deleteData(tmpObj: CustomerData){
+        const notesRef = collection(this.firestore, 'StudentCollection');
+
+        return deleteDoc
+    }
+
 }
