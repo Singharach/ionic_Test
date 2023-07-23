@@ -25,8 +25,8 @@
 
       <ion-item-options>
         <!-- <ion-item-option (click)="showedit(item)">Edit</ion-item-option> -->
-        <ion-item-option>Favorite</ion-item-option>
-        <ion-item-option color="danger">Delete</ion-item-option>
+        <ion-item-option (click)="addedit(item)">Edit</ion-item-option>
+        <ion-item-option (click)="deleteData(item)" color="danger">Delete</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
@@ -36,7 +36,7 @@
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
-      <ion-fab-button (click)="addedit()">
+      <ion-fab-button (click)="addData()">
         <ion-icon name="document"></ion-icon>
       </ion-fab-button>
       <!-- <ion-fab-button>
