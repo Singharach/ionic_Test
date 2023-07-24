@@ -1,0 +1,45 @@
+# price = int(input("ราคาสินค้า : "))
+# ubu = str(input("สินค้าย้อห้อ UBU (y/n) :"))
+# discound = (price * 5 / 100)
+# if price > 100 and ubu == "y":
+#   print(f"ได้รับส่วนลด : {discound + 5 } บาท")
+# elif price > 100 and ubu == "n":
+#   print(f"ได้รับส่วนลด : {discound} บาท")
+# else:
+#   print("ไม่ได้รับส่วนลด")
+
+
+weight = int(input("ป้อนน้ำหนักตัว : "))
+height = float(input("ป้อนส่วนสูง : "))
+bmi = (weight/1000)/(height**2)
+
+print(f"ดัชนีมวลกายคือ {bmi:.2f}")
+
+# st1 = int(input("นักเรียนคนที่ 1 : "))
+# st2 = int(input("นักเรียนคนที่ 2 : "))
+# st3 = int(input("นักเรียนคนที่ 3 : "))
+# st4 = int(input("นักเรียนคนที่ 4 : "))
+# st5 = int(input("นักเรียนคนที่ 5 : "))
+
+# if st1 > 100 or st2 > 100 or st3 > 100 or st4 > 100 or st5 > 100:
+#     print("กรุณากรอกคะแนนระหว่าง 0-100 ")
+
+# else:
+#     liststuden = []
+#     liststuden.append(st1),liststuden.append(st2),liststuden.append(st3),liststuden.append(st4),liststuden.append(st5)
+
+#     res = int(((st1+st2+st3+st4+st5) / 5))
+#     topscore = max(st1,st2,st3,st4,st5)
+#     topstuden = liststuden.index(max(liststuden))
+#     print(f"คะแนนสูงสุด คือ {topscore}\nคะแนนเฉลี่ย คือ {res}\nคนที่ได้คะแนนสูงสุด คือ คนที่ {topstuden+1}")
+
+# a = 5
+# b = 5
+# c = 5
+
+# res = (a+b)%c
+
+# if res >= 1:
+#     print(res)
+# else:
+#     print(res+1)

@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/loginauth',
     pathMatch: 'full'
   },
   {
@@ -22,9 +22,14 @@ const routes: Routes = [
   {
     path: 'homeresult/:dataobj',
     loadChildren: () => import('./pages/homeresult/homeresult.module').then( m => m.HomeresultPageModule)
-  },  {
+  },
+  {
     path: 'customer',
     loadChildren: () => import('./pages/customer/customer.module').then( m => m.CustomerPageModule)
+  },
+  {
+    path: 'loginauth',
+    loadChildren: () => import('./pages/loginauth/loginauth.module').then( m => m.LoginauthPageModule)
   }
 
 
